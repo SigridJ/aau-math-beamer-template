@@ -8,3 +8,8 @@ Guide til at bruge skabelonen:
 
 I skabelonen er der inkluderet korte eksempler på hvordan den kan bruges.
 Disse frames kan naturligvis slettes.
+
+![Forside](img/frontpage.png)
+
+![Eksempel på sætninger](img/thm-example.png)
+
