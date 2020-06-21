@@ -1,0 +1,71 @@
+% Preamble
+
+% Pakker
+\usepackage[utf8]{inputenc}
+\usepackage{tcolorbox}
+\usepackage[T1]{fontenc}
+\usepackage{babel}
+\usepackage{amssymb}
+\usepackage{blkarray}
+\usepackage{tikz}
+\usepackage{fourier}
+
+% Udseende
+\newlength{\sbwidth}
+\setlength{\sbwidth}{1.6cm} % Bredden på sidebaren
+\usetheme[width=\sbwidth]{Berkeley} % Layout er baseret på dette tema, men farvene er ændret
+\usefonttheme{serif}
+\usecolortheme{beaver}
+\logo{\includegraphics[width=\sbwidth]{img/aau-logo.png}}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+\setbeamerfont{frametitle}{series=\bfseries}
+\setbeamerfont{title in sidebar}{series=\bfseries}
+\setbeamerfont{title}{size=\huge,series=\bfseries}
+
+% Farver
+\colorlet{AAUgrey}{gray!10}
+\definecolor{AAUgrey1}{RGB}{ 84, 97,110}
+\definecolor{AAUgrey2}{RGB}{104,119,132}
+\definecolor{AAUgrey3}{RGB}{162,172,182}
+\definecolor{AAUgrey4}{RGB}{222,223,226}
+\definecolor{AAUblue1}{RGB}{ 33, 26, 82}
+\definecolor{AAUblue2}{RGB}{ 89, 79,191}
+\setbeamercolor*{palette primary}{fg=black,bg=white}
+\setbeamercolor*{palette secondary}{bg=AAUgrey}
+\setbeamercolor*{sidebar}{fg=black,bg=AAUgrey}
+\setbeamercolor*{palette sidebar secondary}{fg=AAUgrey1}
+\setbeamercolor*{section in sidebar shaded}{fg=AAUgrey3}
+\setbeamercolor*{subsection in sidebar shaded}{fg=AAUgrey3}
+\setbeamercolor*{title in sidebar}{fg=AAUblue1}
+\setbeamercolor*{title}{fg=AAUblue1}
+\setbeamercolor*{author in sidebar}{fg=black!80}
+\setbeamercolor*{frametitle}{fg=AAUblue1,bg=white}
+\setbeamercolor*{alerted text}{fg=AAUblue2}
+\setbeamercolor*{item projected}{fg=white,bg=AAUblue1}
+\setbeamercolor*{item}{fg=AAUblue1}
+
+% Indholdsfortegnelse før hver nye sektion
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Indhold}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+% Definitioner, sætninger og eksempler udseende (brug thm selv til lemmaer og korollarer)
+\newenvironment{exmp}[1]{\vspace{0.5em}\noident\textbf{#1}\enspace}{\vspace{0.5em}}
+\newenvironment{defn}[1]{\noident\textbf{#1}\enspace}{}
+\newenvironment{thm}[1]{\noident\textbf{#1}\enspace\em}{}
+\tcbuselibrary{breakable}
+\tcbset{colback={AAUgrey}, arc=0mm, colframe=white,boxrule=0pt,toprule=8pt,bottomrule=0pt, breakable}
+\newtcolorbox{theorembox}[2][]{coltitle=black,title={#2},fonttitle=\bfseries,#1, detach title,before upper={\tcbtitle\quad}}
+\tcolorboxenvironment{defn}{bottomrule=8pt,sharp corners}
+\tcolorboxenvironment{thm}{bottomrule=8pt,sharp corners}
+
+% Diverse kommandoer
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\vc}[1]{\mathbf{#1}}
+% ...

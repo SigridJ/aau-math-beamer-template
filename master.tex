@@ -1,0 +1,69 @@
+\documentclass[9pt]{beamer}
+
+\input{incl/pre}
+
+% Information på forsiden
+\title[P2 Eksamen]{Projekttitel}
+\subtitle{Undertitel}
+\author[Forfatter1, Forfatter2]{F.~Forfatter1 \and F.~Forfatter2}
+\date[2020]{3. juni 2020}
+
+\begin{document}
+
+\frame{\titlepage}
+
+% Her inkluderes indhold fra filer der ligger i mappen incl/
+%\input{incl/frame1}...
+
+
+% EKSEMPLER-----------------------------------
+% Frame med eksempel på sætningsmiljøer
+\section{Definitioner, sætninger og eksempler}
+\begin{frame}{Eksempel på definition-, sætning- og eksempelmiljøer}
+	Her er noget tekst
+	\alert{highlighted}
+	fordi det er vigtigt.
+
+	\begin{defn}{Definition 1.1}
+		Den første definition
+	\end{defn}
+	
+	\begin{exmp}{Eksempel}
+		Det første eksempel
+	\end{exmp}
+
+	\begin{thm}{Sætning 2}
+		En sætning der er skrå.
+		Her er noget matematik.
+		\begin{align}
+			\sum_{k=1}^n 2k-1 = n^2
+		\end{align}
+	\end{thm}
+\end{frame}
+
+% Eksempler på lister
+\section{Lister}
+
+% Frame med eksempel på punkter med effekter
+\subsection{Punkter og effekter}
+\begin{frame}{Et eksempel med brug af effekter på punkter}
+	Her er der et frame med en punktopsætning.
+	\begin{itemize} % Husk <#-> efter \item, hvor # er tallet på hvornår punktet dukker op
+		\item<1-> Dette er første punkt.
+		\item<2-> Dette er andet punkt på listen.
+		\item<3-> Her er tredje punkt.
+		\item<4-> Her er det fjerde punkt på listen.
+	\end{itemize}
+\end{frame}
+
+% Eksempel på en nummereret liste
+\subsection{Nummereret liste}
+\begin{frame}{Eksempel på en nummereret liste}
+	\begin{enumerate}
+		\item Første skridt.
+		\item Andet skridt.
+		\item Tredje skridt.
+	\end{enumerate}
+\end{frame}
+
+\end{document}
