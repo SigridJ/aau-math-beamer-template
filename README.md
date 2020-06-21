@@ -1,4 +1,4 @@
-# Beamer skabelon
+# AAU beamer skabelon
 Dette er en simpel skabelon til en beamer for studerende på Aalborg Universitet skrevet i LaTeX.
 
 Guide til at bruge skabelonen:
