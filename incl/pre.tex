@@ -55,9 +55,9 @@
 }
 
 % Definitioner, sætninger og eksempler udseende (brug thm selv til lemmaer og korollarer)
-\newenvironment{exmp}[1]{\vspace{0.5em}\noident\textbf{#1}\enspace}{\vspace{0.5em}}
-\newenvironment{defn}[1]{\noident\textbf{#1}\enspace}{}
-\newenvironment{thm}[1]{\noident\textbf{#1}\enspace\em}{}
+\newenvironment{exmp}[1]{\vspace{0.5em}\noindent\textbf{#1}\enspace}{\vspace{0.5em}}
+\newenvironment{defn}[1]{\noindent\textbf{#1}\enspace}{}
+\newenvironment{thm}[1]{\noindent\textbf{#1}\enspace\em}{}
 \tcbuselibrary{breakable}
 \tcbset{colback={AAUgrey}, arc=0mm, colframe=white,boxrule=0pt,toprule=8pt,bottomrule=0pt, breakable}
 \newtcolorbox{theorembox}[2][]{coltitle=black,title={#2},fonttitle=\bfseries,#1, detach title,before upper={\tcbtitle\quad}}
