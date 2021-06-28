@@ -54,6 +54,17 @@
   \end{frame}
 }
 
+% Align virker med pauser
+\makeatletter
+\let\save@measuring@true\measuring@true
+\def\measuring@true{%
+  \save@measuring@true
+  \def\beamer@sortzero##1{\beamer@ifnextcharospec{\beamer@sortzeroread{##1}}{}}%
+  \def\beamer@sortzeroread##1<##2>{}%
+  \def\beamer@finalnospec{}%
+}
+\makeatother
+
 % Definitioner, sætninger og eksempler udseende (brug thm selv til lemmaer og korollarer)
 \newenvironment{exmp}[1]{\vspace{0.5em}\noindent\textbf{#1}\enspace}{\vspace{0.5em}}
 \newenvironment{defn}[1]{\noindent\textbf{#1}\enspace}{}
